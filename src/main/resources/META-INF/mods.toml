@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="techrobotics"
+version="1.0.0"
+displayName="Tech Robotics"
+description='''
+A technology mod that adds mechanical drones with advanced GeckoLib animations.
+Features a Mech Drone hostile mob with idle, walk, and attack animations.
+'''
+
+[[dependencies.techrobotics]]
+modId="forge"
+mandatory=true
+versionRange="[36,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.techrobotics]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.5]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.techrobotics]]
+modId="geckolib3"
+mandatory=true
+versionRange="[3.0.0,)"
+ordering="NONE"
+side="BOTH"
