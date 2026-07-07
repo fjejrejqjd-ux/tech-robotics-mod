@@ -21,8 +21,13 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Create Gradle Wrapper
+        run: |
+          gradle wrapper --gradle-version 7.5.1
+          chmod +x gradlew
+
       - name: Build with Gradle
-        run: gradle build --stacktrace --no-daemon
+        run: ./gradlew build --stacktrace --no-daemon
 
       - name: Upload JAR artifact
         if: success()
@@ -47,8 +52,13 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Create Gradle Wrapper
+        run: |
+          gradle wrapper --gradle-version 7.5.1
+          chmod +x gradlew
+
       - name: Build JAR
-        run: gradle build --stacktrace --no-daemon
+        run: ./gradlew build --stacktrace --no-daemon
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
